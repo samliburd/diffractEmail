@@ -1,9 +1,18 @@
 {
   "name": "signature",
   "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "dev": "yarn parcel index.html",
+    "build": "parcel build index.html --public-url /diffractEmail/",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist"
+  },
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "parcel": "^2.12.0"
+  },
+  "dependencies": {
+    "svgexport": "^0.4.2"
   }
 }
